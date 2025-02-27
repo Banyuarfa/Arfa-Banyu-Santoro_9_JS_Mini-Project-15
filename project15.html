@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 15</title>
+    <style>
+      .highlight {
+        color: blue;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="itemList">
+      <li>Arfa</li>
+      <li>Banyu</li>
+      <li>Santoro</li>
+      <li>Sangat</li>
+      <li>Tampan</li>
+      <li>Dan</li>
+      <li>Pemberani</li>
+    </ul>
+
+    <button onclick="highlightEvenItems()">Ubah warna</button>
+
+    <script>
+      function highlightEvenItems() {
+        const items = document.querySelectorAll("#itemList li");
+        items.forEach((item, index) => {
+          if ((index + 1) % 2 === 0) {
+            item.classList.toggle("highlight");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
